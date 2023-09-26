@@ -1,0 +1,7 @@
+img {
+  object-fit: contain;
+}
+
+.modal-dialog {
+  overflow-y: initial !important;
+}

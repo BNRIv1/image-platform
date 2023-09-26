@@ -1,0 +1,143 @@
+<div class="container-fluid mt-3 navbar_custom">
+  <div class="row">
+    <div class="col-1 d-flex justify-content-center">
+      <a routerLink="/"
+        ><img class="logo_image"
+          src="https://static-00.iconduck.com/assets.00/logo-social-media-old-instagram-icon-2048x2048-n15qdqkp.png"
+      /></a>
+    </div>
+    <div class="col-7">
+      <input
+        type="search"
+        placeholder="Search"
+        class="search-field"
+        [formControl]="searchControl"
+      />
+      <button type="submit" class="search-button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+    <div
+      *ngIf="!user?.isUserPremium"
+      class="col-1 text-center d-flex align-items-center justify-content-center"
+      style="border-right: 1px solid rgb(194, 192, 192)"
+    >
+      <a *ngIf="user" routerLink="/buy-premium" class="text-decoration-none text-dark"
+        >Join Premium+</a
+      >
+      <a *ngIf="!user" routerLink="/login" class="text-decoration-none text-dark"
+        >Join Premium+</a
+      >
+    </div>
+    <div class="col-3 d-flex justify-content-around align-items-center">
+      <a
+        style="cursor: pointer; text-decoration: none; color: black"
+        routerLink="/profile"
+        [queryParams]="{ authorId: user.id }"
+        *ngIf="user"
+        >Hello {{ user.username }}!</a
+      >
+      <a
+        routerLink="/login"
+        *ngIf="!userLoggedIn"
+        class="text-decoration-none text-dark"
+        >Log In</a
+      >
+      <a
+        (click)="logout()"
+        *ngIf="userLoggedIn"
+        class="text-decoration-none text-dark"
+        style="cursor: pointer"
+        >Log Out</a
+      >
+      <a routerLink="/admin" *ngIf="user?.role == 'ADMIN'" style="color: black; text-decoration: none;">Admin</a>
+      <button
+        class="btn btn-outline-dark"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModalCenter"
+        *ngIf="user"
+      >
+        Upload a photo
+      </button>
+      <button
+        class="btn btn-outline-dark"
+        (click)="uploadPhoto()"
+        *ngIf="!user"
+      >
+        Upload a photo
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <form [formGroup]="postForm" (ngSubmit)="submit()" enctype="multipart/form-data">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="form-group">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="description"
+                placeholder="Description"
+                formControlName="description"
+              />
+              <label for="description">Description</label>
+            </div>
+            <div class="mb-3">
+              <label for="formFile" class="form-label">Upload Image</label>
+              <input
+                class="form-control"
+                type="file"
+                id="formFile"
+                formControlName="image"
+                (change)="onFileChange($event)"
+              />
+            </div>
+            <select
+              class="form-select"
+              (change)="changeCategory($event)"
+              formControlName="category"
+            >
+              <option
+                *ngFor="let category of categories"
+                value="{{ category.id }}"
+              >
+                {{ category.title }}
+              </option>
+            </select>
+          </div>
+          <div class="form-check mt-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="flexCheckDefault"
+              formControlName="isPremium"
+              (change)="changeCheckbox($event)"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              Is the post Premium+?
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">
+            Add Post
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

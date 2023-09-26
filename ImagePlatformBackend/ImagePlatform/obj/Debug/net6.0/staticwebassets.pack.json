@@ -1,0 +1,77 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\034f9c1f-ac57-4d1d-8e13-124123957315.jpg",
+      "PackagePath": "staticwebassets\\uploads\\034f9c1f-ac57-4d1d-8e13-124123957315.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\03b6cb1b-0b1c-4330-a317-4711818dfe42.jpg",
+      "PackagePath": "staticwebassets\\uploads\\03b6cb1b-0b1c-4330-a317-4711818dfe42.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\0c6deb37-16af-41ea-b0dc-48264f678162.jpg",
+      "PackagePath": "staticwebassets\\uploads\\0c6deb37-16af-41ea-b0dc-48264f678162.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\26eb9956-42ed-45bf-8711-fc782b5e4bf0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\26eb9956-42ed-45bf-8711-fc782b5e4bf0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\3cd473e3-4efc-464b-859f-1b062a51c47a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\3cd473e3-4efc-464b-859f-1b062a51c47a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\6192bdef-e05e-42a7-94ef-e7f56cace9b2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6192bdef-e05e-42a7-94ef-e7f56cace9b2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\62b3a650-eb80-4e1e-b7aa-4f1ea3a0ab3e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\62b3a650-eb80-4e1e-b7aa-4f1ea3a0ab3e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\7e02766b-c224-4d15-be9c-949e6f590375.jpg",
+      "PackagePath": "staticwebassets\\uploads\\7e02766b-c224-4d15-be9c-949e6f590375.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\7ff1e91b-0e32-4a6d-83df-9cd9b95a0e61.jpg",
+      "PackagePath": "staticwebassets\\uploads\\7ff1e91b-0e32-4a6d-83df-9cd9b95a0e61.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\8dc6a9b2-71d8-4881-80bf-77c22eb55554.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8dc6a9b2-71d8-4881-80bf-77c22eb55554.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\b23b94ba-6e5e-4031-baa7-dad6b71aa0b2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b23b94ba-6e5e-4031-baa7-dad6b71aa0b2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\e972b424-12d0-475c-974f-7af10d61369a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e972b424-12d0-475c-974f-7af10d61369a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\faab4cfe-0716-4ce4-91e6-5c029ad29ba3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\faab4cfe-0716-4ce4-91e6-5c029ad29ba3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Bojan\\Desktop\\BNRI\\FINKI\\VI Semestar\\IS\\Project\\ImagePlatformBackend\\ImagePlatform\\wwwroot\\uploads\\ffacfa82-d4e5-44c4-b6a4-f92eff26d12c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ffacfa82-d4e5-44c4-b6a4-f92eff26d12c.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ImagePlatform.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ImagePlatform.props",
+      "PackagePath": "build\\ImagePlatform.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ImagePlatform.props",
+      "PackagePath": "buildMultiTargeting\\ImagePlatform.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ImagePlatform.props",
+      "PackagePath": "buildTransitive\\ImagePlatform.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

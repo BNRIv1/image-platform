@@ -1,0 +1,36 @@
+<div class="d-flex align-items-end mt-3">
+    <a
+      style="text-decoration: none; cursor: pointer"
+      class="premium me-5 text-dark"
+      routerLink="/premium"
+      >Premium+</a
+    >
+    <div class="scrollmenu">
+      <a [routerLink]="['/']" [queryParams]="{ category: null }" class="text-dark"
+        >All Categories</a
+      >
+      <a
+        [routerLink]="['/']"
+        [queryParams]="{ category: category.id }"
+        *ngFor="let category of categories"
+        class="text-dark"
+        >{{ category.title }}</a
+      >
+    </div>
+  </div>
+  <div class="container mt-3">
+    <div class="image-container">
+      <div *ngFor="let post of premiumPosts" class="image_card">
+        <div *ngIf="post.isPremium" class="premium_badge">Premium+</div>
+        <img
+          src="{{ post.imageUrl }}"
+          alt=""
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="{{ post.description }}"
+          (click)="openModal(post.id)"
+        />
+      </div>
+    </div>
+  </div>
+  

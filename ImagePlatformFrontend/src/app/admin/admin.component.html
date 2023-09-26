@@ -1,0 +1,126 @@
+<div class="row">
+  <div class="d-flex justify-content-between">
+    <button class="btn btn-outline-success my-3" (click)="exportUsers()">
+      Export All Users
+    </button>
+    <button
+      class="btn btn-outline-primary my-3"
+      data-bs-toggle="modal"
+      data-bs-target="#categoryModal"
+    >
+      Add New Category
+    </button>
+  </div>
+</div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Category Id</th>
+      <th scope="col">Category Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let category of categories; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ category.id }}</td>
+      <td>{{ category.title }}</td>
+      <td>
+        <button
+          class="btn"
+          data-bs-toggle="modal"
+          data-bs-target="#categoryEditModal"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+        <div
+          class="modal fade"
+          id="categoryEditModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-dialog-centered"
+            role="document"
+            id="categoryEditModal"
+          >
+            <form [formGroup]="categoryEditForm" (ngSubmit)="submit()">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="form-group">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="title"
+                        placeholder="Title"
+                        formControlName="title"
+                      />
+                      <label for="title">Title</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    data-bs-dismiss="modal"
+                    (click)="editCategory(category.id)"
+                  >
+                    Edit Category
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <button class="btn ms-3" (click)="deleteCategory(category.id)">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div
+  class="modal fade"
+  id="categoryModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered"
+    role="document"
+    id="categoryModal"
+  >
+    <form [formGroup]="categoryForm" (ngSubmit)="submit()">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="form-group">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                placeholder="Title"
+                formControlName="title"
+              />
+              <label for="title">Title</label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="addCategory()"> 
+            Add Category
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

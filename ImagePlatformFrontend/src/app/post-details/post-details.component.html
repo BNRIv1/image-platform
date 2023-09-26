@@ -1,0 +1,54 @@
+<div class="modal-header">
+  <div class="d-flex align-items-center">
+    <a
+      (click)="closeModal()"
+      routerLink="/profile"
+      [queryParams]="{ authorId: post?.author?.id }"
+      class="ms-1 text-decoration-none text-dark"
+      style="cursor: pointer"
+      ><strong>@{{ post?.author?.username }}</strong></a
+    >
+  </div>
+  <button
+    *ngIf="!post?.isPremium"
+    class="btn btn-success"
+  >
+    <a
+      href="https://localhost:7105/{{ post?.imageUrl }}"
+      class="btn btn-success"
+      >Download Free</a
+    >
+  </button>
+  <button
+    *ngIf="post?.isPremium"
+    class="btn btn-primary"
+    [disabled]="!currentUser?.isUserPremium"
+  >
+    <a
+      href="https://localhost:7105/{{ post?.imageUrl }}"
+      class="btn btn-primary"
+      >Download Premium+</a
+    >
+  </button>
+</div>
+<div class="modal-body d-flex justify-content-center">
+  <img src="https://localhost:7105/{{ post?.imageUrl }}" class="rounded-1" />
+</div>
+<div class="row mt-3">
+  <div class="col-3">
+    <div class="d-flex justify-content-around">
+      <div>
+        <p class="text-muted">Views</p>
+        <p style="margin-top: -15px">{{ post?.views }}</p>
+      </div>
+      <div>
+        <p class="text-muted">Downloads</p>
+        <p style="margin-top: -15px">{{ post?.downloads }}</p>
+      </div>
+      <div>
+        <p class="text-muted">Featured In</p>
+        <p style="margin-top: -15px">{{ post?.category?.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>

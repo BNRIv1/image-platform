@@ -1,0 +1,21 @@
+<div class="row mt-5">
+  <div class="d-flex align-items-center justify-content-center">
+    <div class="display-4 ms-5">@{{ user?.username }}</div>
+  </div>
+</div>
+<hr />
+<div class="container mt-3">
+  <div class="image-container">
+    <div *ngFor="let post of userPosts" class="image_card">
+      <div *ngIf="post.isPremium" class="premium_badge">Premium+</div>
+      <img
+        src="https://localhost:7105/{{post.imageUrl}}"
+        alt=""
+        data-toggle="tooltip"
+        data-placement="bottom"
+        title="{{ post.description }}"
+        (click)="openModal(post.id)"
+      />
+    </div>
+  </div>
+</div>
